@@ -7,13 +7,52 @@
     <meta name="description" lang="pl" content="Budowa nowoczesnych domów">
     <meta name="author" content="Nilmerg Omino">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="css/fontello/css/fontello.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Mdom</title>
 </head>
 <body>
-
-
+    <header class="header">
+        <a href=""><img class="header__logo" alt="Mdom"></a>
+        <h1 class="header__heading">Mdom</h1>
+        <p class="header__subtitle">nowoczesne budownictwo</p>
+    </header>
+    <nav class="nav" id="nav">
+        <ul class="nav__list">
+            <li><a class="nav__link" href="#o-firmie">O firmie</a></li>
+            <li><a class="nav__link" href="#nasze-projekty">Nasze projekty</a></li>
+            <li><a class="nav__link" href="#galeria">Galeria</a></li>
+            <li><a class="nav__link" href="#o-nas">O nas</a></li>
+            <li><a class="nav__link" href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+    <main class="main" id="main">
+        <article class="main__article" id="o-firmie">
+            <h2 class="main__heading">O naszej firmie</h2>
+            <div class="main__about-container">
+                <p>Jesteśmy firmą z wieloletnim doświadczeniem zajmującą się budową nowoczesnych domów.</p>
+                <p>Tworzymy projekty domów dopasowane specjalnie pod wymagania naszego klienta.</p>
+                <p>Cenimy sobie zaufanie i kontakt z klientem na każdym etapie projektowania i budowy domu.</p>
+            </div>
+            <figure class="main__about-image">
+                <img src="img/house_4.png" alt="projekt domu">
+            </figure>
+        </article>
+        <article class="main__article" id="nasze-projekty">
+            <h2 class="main__heading">Nasze projekty</h2>
+        </article>
+        <article class="main__article" id="galeria">
+            <h2 class="main__heading">Galeria zdjęć</h2>
+        </article>
+        <article class="main__article" id="o-nas">
+            <h2 class="main__heading">O nas - kim jesteśmy?</h2>
+        </article>
+        <article class="main__article" id="kontakt">
+            <h2 class="main__heading">Kontakt</h2>
+        </article>
+    </main>
+<script src="js/sticky-nav.js"></script>
+<script src="js/smooth-scroll.js"></script>
 </body>
 </html>

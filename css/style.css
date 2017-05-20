@@ -125,5 +125,102 @@ template {
   display: none; }
 
 /*  NORMALIZE END  */
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  background-color: #edf0f4; }
+
+.header {
+  height: 85%;
+  width: 100%;
+  background: url("../img/house_5.jpg") no-repeat fixed center;
+  background-size: cover;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8); }
+  .header .header__heading {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding-top: 40px; }
+  .header .header__logo {
+    position: absolute;
+    top: 10%;
+    left: 10%; }
+
+.nav {
+  text-align: center;
+  width: 80%;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  left: calc(10% - 1px);
+  top: 85%;
+  transform: translateY(-50px);
+  z-index: 100;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: none;
+  transition: box-shadow 0.5s; }
+
+.nav_sticky {
+  transform: translateY(0);
+  top: 0;
+  position: fixed;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); }
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .nav__list li {
+    display: inline-block;
+    margin-right: 10%;
+    padding-top: 14px; }
+    .nav__list li:last-child {
+      margin-right: 0; }
+  .nav__list .nav__link {
+    font-size: 16px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8); }
+    .nav__list .nav__link:hover {
+      text-decoration: underline; }
+    .nav__list .nav__link:focus {
+      text-decoration: underline;
+      outline: none; }
+
+.main {
+  min-height: 1000px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-top: none;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 50px; }
+
+.main__article {
+  padding: 50px 10px 30px 10px;
+  min-height: 500px;
+  margin-top: 10px; }
+  .main__article .main__heading {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 32px;
+    color: rgba(0, 0, 0, 0.8); }
+
+.main__about-container {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+  width: 40%;
+  padding: 50px 5% 50px 5%;
+  float: left;
+  text-align: center; }
+
+.main__about-image {
+  width: 40%;
+  float: left; }
+  .main__about-image img {
+    width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function(){
     var nav = document.getElementById('nav'),
-        topPos = nav.offsetTop-50;
+        topPos = nav.offsetTop;
     if(pageYOffset >= topPos) nav.classList.add('nav_sticky');
     window.addEventListener("scroll", function(){
         var currentPos = pageYOffset;

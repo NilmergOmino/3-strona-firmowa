@@ -1,6 +1,22 @@
 $lato-font: 'Lato', sans-serif;
 $light-black: rgba(0,0,0,0.8);
-
+@mixin container($color: $light-black, $float: left){
+    color: $color;
+    font-size: 20px;
+    height: 350px;
+    width: 40%;
+    padding: 50px 5% 0 5%;
+    float: $float;
+    text-align: center;
+}
+@mixin floating-figure($float: left){
+    width: 40%;
+    float: $float;
+    img{
+        max-height: 400px;
+        width: 100%;
+    }
+}
 @import 'normalize';
 html{
     height: 100%;
@@ -39,8 +55,7 @@ body{
     background-color: rgba(255,255,255,0.9);
     position: absolute;
     left: calc(10% - 1px);
-    top: 85%;
-    transform: translateY(-50px);
+    top: calc(85% - 50px);
     z-index: 100;
     border: 1px solid rgba(0,0,0,0.4);
     border-bottom: none;
@@ -97,18 +112,66 @@ body{
         color: $light-black;
     }
 }
+.clear{
+    clear: both;
+}
+.main__offer-section{
+    min-height: 400px;
+    margin-bottom: 50px;
+}
 .main__about-container{
-    color: $light-black;
-    font-size: 20px;
-    width: 40%;
-    padding: 50px 5% 50px 5%;
-    float: left;
-    text-align: center;
+    @include container();
 }
 .main__about-image{
-    width: 40%;
-    float: left;
-    img{
-        width: 100%;
+    @include floating-figure();
+}
+.main__offer-architect{
+    @include container($float: right);
+}
+.main__offer-architect-image{
+    @include floating-figure($float: right);
+}
+.main__offer-building{
+    @include container();
+    padding-top: 20px;
+}
+.main__offer-building-image{
+    @include floating-figure();
+}
+.main__offer-arrangement{
+    @include container($float: right);
+    padding-top: 20px;
+}
+.main__offer-arrangement-image{
+    @include floating-figure($float: right);
+}
+.main__offer-section-realizations{
+    color: $light-black;
+    text-align: center;
+    min-height: 150px;
+    font-size: 20px;
+    vertical-align: top;
+    .main__our-realization{
+        display: inline-block;
+        margin-right: 20px;
+        margin-top: 30px;
+        &:last-child{
+            margin-right: 0;
+        }
     }
+    .main__our-realization-count{
+        display: block;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+}
+@keyframes fade-in-up{
+    0%{opacity: 0; transform: translateY(40px);}
+    100%{opacity: 1; transform: translateY(0);}
+}
+.fade-in-animation{
+    animation: fade-in-up;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
 }

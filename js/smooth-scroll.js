@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', function(){
         var navElement = navElements[i];
         navElement.addEventListener('click', function(event){
             var clickedElement = event.target,
-                speed = 2;
+                speed = 2.5;
                 target = document.getElementById(clickedElement.hash.slice(1)),
                 upto = target.offsetTop,
                 percentStart = 0,

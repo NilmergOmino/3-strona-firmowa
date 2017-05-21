@@ -3,19 +3,20 @@ window.addEventListener('DOMContentLoaded', function(){
         var countingSpans = document.getElementsByClassName('main__our-realization-count'),
             countingSpansAmount = countingSpans.length,
             countingEnding = [];
-        var countIt = function(element, ending){
-            var currentValue = Number(element.innerHTML);
-            var countStep = Math.round(ending/39); //aby liczenie skończyło się równocześnie liczba '39' musi być najmniejszą wartością z liczonych
+        var countIt = function(element, ending, start){
+            var currentValue = Number(element.innerHTML),
+                countStep = Math.round((ending - currentValue)* start/300);
+            var start = start+2;
             if (countStep < 1) countStep = 1;
             if(currentValue < ending){
                 element.innerHTML = currentValue + countStep;
-                window.setTimeout(function(){countIt(element, ending)}, 50);
+                window.setTimeout(function(){countIt(element, ending, start)}, 100);
             }
         }
         for(var i=0; i < countingSpansAmount; i++){
             countingEnding[i] = Number(countingSpans[i].innerHTML);
             countingSpans[i].innerHTML = 0;
-            countIt(countingSpans[i], countingEnding[i]);
+            countIt(countingSpans[i], countingEnding[i], 1);
         }
     }
     var positionCheck = function(element){

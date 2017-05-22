@@ -44,9 +44,6 @@ body{
         top: 10%;
         left: 10%;
     }
-    .header__subtitle{
-
-    }
 }
 .nav{
     text-align: center;
@@ -279,9 +276,14 @@ body{
     padding-right: 10%;
 }
 .main__our-people-figure{
+    color: $light-black;
+    font-size: 16px;
     padding: 20px;
+    width: 150px;
+    min-height: 200px;
     display: inline-block;
     text-align: center;
+    vertical-align: top;
 }
 .main__our-people-image{
     height: 100px;
@@ -291,5 +293,36 @@ body{
     border: 2px solid rgba(50,50,50,0.5);
     &:hover{
         border-radius: 2%;
+    }
+}
+.main_our-people-description{
+    font-size: 20px;
+    color: $light-black;
+    padding: 0 10%;
+}
+.main__contact-container-first, .main__contact-container-second{
+    float: left;
+    width: 40%;
+    height: 300px;
+    color: $light-black;
+    font-size: 18px;
+}
+.main__contact-container-second{
+    width: 60%;
+}
+.main__contact-input, .main__contact-textarea{
+    font-family: $lato-font;
+    border: 2px solid rgba(50,50,50,0.5);
+    border-radius: 1px;
+    display: block;
+    margin: 20px 0;
+    width: 90%;
+    padding: 5px 0;
+    &:hover{
+        border: 2px solid rgba(50,50,50,0.8);
+    }
+    &:focus{
+        outline: none;
+        border: 2px solid rgba(50,50,50,0.8);
     }
 }

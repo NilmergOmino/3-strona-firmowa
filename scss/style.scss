@@ -176,3 +176,120 @@ body{
     animation-timing-function: ease-out;
     animation-duration: 1s;
 }
+.main__gallery-container{
+    text-align: center;
+    width: 70%;
+    margin: 50px auto;
+}
+.main__gallery-image{
+    height: 150px;
+    margin: 4px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.2);
+    transition: 0.2s;
+    &:hover{
+        opacity: 0.9;
+        //outline: 1px solid $light-black;
+    }
+}
+@keyframes show-gallery-view {
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
+.gallery-view-container{
+    animation: show-gallery-view;
+    animation-duration: 0.5s;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0,0,0,0.8);
+    top: 0;
+    left: 0;
+    z-index: 200;
+    text-align: center;
+    color: rgba(255,255,255,0.8);
+    .gallery-view-title{
+        text-align: center;
+        margin: 0;
+        height: 20px;
+        padding: 15px 0;
+        background-color: $light-black;
+    }
+}
+.gallery-view-exit-button{
+    font-family: $lato-font;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    height: 30px;
+    width: 150px;
+    cursor: pointer;
+    color: rgba(255,255,255,0.8);
+    background-color: rgba(0,0,0,0.2);
+    border: 1px solid rgb(190,0,0);
+    &:hover{
+        background-color: rgb(190,0,0);
+    }
+    &:focus{
+        background-color: rgb(190,0,0);
+        outline: none;
+    }
+}
+.gallery-view-previous-button, .gallery-view-next-button{
+    font-family: $lato-font;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: rgba(0,0,0,0);
+    height: calc(100% - 50px);
+    width: 10%;
+    display: inline-block;
+    vertical-align: middle;
+    transition: 0.3s;
+    color: rgba(255,255,255,0.8);
+    cursor: pointer;
+    &:hover{
+        background-color: rgba(0,0,0,0.2);
+    }
+    &:focus{
+        outline: none;
+        background-color: rgba(0,0,0,0.2);
+    }
+}
+.gallery-view-figure{
+    width: 70%;
+    height: calc(100% - 150px);
+    display: inline-block;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+.gallery-view-image{
+    max-width: 100%;
+    max-height: 100%;
+}
+.gallery-view-figcaption{
+    height: 50px;
+    text-align: center;
+}
+.main__article-our-people{
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.main__our-people-figure{
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+}
+.main__our-people-image{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    transition: 1s;
+    border: 2px solid rgba(50,50,50,0.5);
+    &:hover{
+        border-radius: 2%;
+    }
+}

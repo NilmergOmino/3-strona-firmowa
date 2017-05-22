@@ -136,7 +136,7 @@ body {
 .header {
   height: 85%;
   width: 100%;
-  background: url("../img/house_5.jpg") no-repeat fixed center;
+  background: url("../img/background.jpg") no-repeat fixed center;
   background-size: cover;
   text-align: center;
   color: rgba(0, 0, 0, 0.8); }
@@ -285,12 +285,13 @@ body {
   color: rgba(0, 0, 0, 0.8);
   text-align: center;
   min-height: 150px;
+  margin-top: 100px;
   font-size: 20px;
   vertical-align: top; }
   .main__offer-section-realizations .main__our-realization {
     display: inline-block;
     margin-right: 20px;
-    margin-top: 30px; }
+    margin-top: 50px; }
     .main__offer-section-realizations .main__our-realization:last-child {
       margin-right: 0; }
   .main__offer-section-realizations .main__our-realization-count {

@@ -3,20 +3,23 @@ window.addEventListener('DOMContentLoaded', function(){
         var countingSpans = document.getElementsByClassName('main__our-realization-count'),
             countingSpansAmount = countingSpans.length,
             countingEnding = [];
-        var countIt = function(element, ending, start){
+
+        var countIt = function(element, ending, timeStep){
             var currentValue = Number(element.innerHTML),
-                countStep = Math.round((ending - currentValue)* start/300);
-            var start = start+2;
-            if (countStep < 1) countStep = 1;
+                step = Math.round((ending-currentValue)*(currentValue/ending)/10);
+            if (step == 0) step = 1;
+            var timeStep = timeStep;
             if(currentValue < ending){
-                element.innerHTML = currentValue + countStep;
-                window.setTimeout(function(){countIt(element, ending, start)}, 100);
+                element.innerHTML = currentValue + step;
+                setTimeout(function(){countIt(element, ending, timeStep)}, timeStep);
             }
         }
+
         for(var i=0; i < countingSpansAmount; i++){
             countingEnding[i] = Number(countingSpans[i].innerHTML);
             countingSpans[i].innerHTML = 0;
-            countIt(countingSpans[i], countingEnding[i], 1);
+            var timeStep = Math.round(1500/countingEnding[i]);
+            countIt(countingSpans[i], countingEnding[i], timeStep);
         }
     }
     var positionCheck = function(element){

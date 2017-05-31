@@ -43,7 +43,7 @@
             <h2 class="main__heading">Nasza oferta</h2>
             <section class="main__offer-section">
                 <div class="main__offer-architect fade-in">
-                    <h3>Tworzenie projektów domów</h3>
+                    <h3>Tworzenie projeku domu</h3>
                     <p>Każdy nowy projekt realizowany jest przez zespół doświadczonych architektów. Donec pretium, tellus at vestibulum interdum, massa massa accumsan eros, id tincidunt augue justo non elit. Etiam et ex eget ex luctus pretium rutrum ut justo.</p>
                 </div>
                 <figure class="main__offer-architect-image fade-in">
@@ -152,25 +152,55 @@
             <h2 class="main__heading">Kontakt</h2>
             <form class="main__contact-form">
                 <div class="main__contact-container-first">
-                    <p>
+                    <p class="fade-in">
                         <label for="email">Twój adres e-mail</label>
-                        <input type="email" name="email" id="email" class="main__contact-input">
+                        <input type="email" name="email" id="email" class="main__contact-input" required>
                     </p>
-                    <p>
+                    <p class="fade-in">
                         <label for="title">Tytuł wiadomości</label>
-                        <input type="text" name="title" id="title" class="main__contact-input">
+                        <input type="text" name="title" id="title" class="main__contact-input" required>
                     </p>
                 </div>
                 <div class="main__contact-container-second">
-                    <label for="content">Treść wiadomości</label>
-                    <textarea id="content" class="main__contact-textarea"></textarea>
+                    <p class="fade-in">
+                        <label for="content">Treść wiadomości</label>
+                        <textarea id="content" class="main__contact-textarea" required></textarea>
+                    </p>
+                    <input type="submit" value="Wyślij" class="main__contact-submit fade-in">
                 </div>
-                <p>
-                    <input type="submit" value="Wyślij" class="main__contact-submit">
-                </p
+                <div class="clear"></div>
             </form>
+            <section class="main__contact-section-office">
+                <div class="main__office-container fade-in">
+                    <h3 class="main__contact-section-heading">Nasze biuro</h3>
+                    <p>Kraków</p>
+                    <p>ulica Brzozowa 13</p>
+                    <p>Numer tel. - <a href="tel:111222333" class="main__phone-number">111 222 333</a></p>
+                </div>
+                <div class="main__map-contaner fade-in">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.749919255003!2d19.943564315190883!3d50.05351587942255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b6ac21c42d9%3A0x5286176d7061c516!2sBrzozowa+13%2C+33-332+Krak%C3%B3w%2C+Poland!5e0!3m2!1sen!2suk!4v1496249572168"  frameborder="0" class="main__google-map" allowfullscreen></iframe>
+                </div>
+                <div class="clear"></div>
+            </section>
         </article>
     </main>
+    <footer class="footer">
+        <section>
+            <h2>Social media</h2>
+            <ul class="footer__social-media-list">
+                <li><a href="#"><img src="img/icons/facebook.svg" alt="facebook"></a></li>
+                <li><a href="#"><img src="img/icons/twitter.svg" alt="twitter"></a></li>
+                <li><a href="#"><img src="img/icons/youtube.svg" alt="youtube"></a></li>
+                <!-- icons from https://icomoon.io/app/#/select  GPL license-->
+            </ul>
+        </section>
+        <section>
+            <h2>O stronie</h2>
+            <p>Autor: Nilmerg</p>
+            <p>Mdom to firma całkowicie fikcyjna</p>
+            <p>Projekt ten realizowany jest w celu nauki.</p>
+        </section>
+    </footer>
 <script src="js/sticky-nav.js"></script>
 <script src="js/smooth-scroll.js"></script>
 <script src="js/fade-in.js"></script>

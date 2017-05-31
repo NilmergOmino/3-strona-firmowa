@@ -90,13 +90,13 @@ body{
     }
 }
 .main{
-    min-height: 1000px;
+    min-height: 1200px;
     background-color: rgba(255,255,255,0.9);
     border: 1px solid rgba(0,0,0,0.4);
     border-top: none;
     width: 80%;
     margin: 0 auto;
-    padding-top: 50px;
+    padding: 50px 0;
 }
 .main__article{
     padding: 50px 10px 30px 10px;
@@ -301,9 +301,10 @@ body{
     padding: 0 10%;
 }
 .main__contact-container-first, .main__contact-container-second{
+    text-align: center;
     float: left;
     width: 40%;
-    height: 300px;
+    min-height: 200px;
     color: $light-black;
     font-size: 18px;
 }
@@ -315,7 +316,7 @@ body{
     border: 2px solid rgba(50,50,50,0.5);
     border-radius: 1px;
     display: block;
-    margin: 20px 0;
+    margin: 20px auto;
     width: 90%;
     padding: 5px 0;
     &:hover{
@@ -324,5 +325,109 @@ body{
     &:focus{
         outline: none;
         border: 2px solid rgba(50,50,50,0.8);
+    }
+}
+.main__contact-textarea{
+    height: 132px;
+    box-sizing: border-box;
+}
+.main__contact-submit{
+    box-sizing: border-box;
+    font-family: $lato-font;
+    font-size: 18px;
+    width: 90%;
+    padding: 5px 0;
+    background-color: rgba(50,50,50,0.8);
+    color: white;
+    border: 2px solid rgba(50,50,50,0.8);
+    border-radius: 0;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+    &:hover{
+        background-color: rgba(50,50,50,0.4);
+    }
+    &:focus{
+        background-color: rgba(50,50,50,0.4);
+        outline: none;
+    }
+}
+.main__contact-section-office{
+    margin-top: 150px;
+    color: $light-black;
+    font-size: 18px;
+    text-align: center;
+}
+.main__contact-section-heading{
+    font-size: 20px;
+    text-align: center;
+}
+.main__office-container, .main__map-contaner{
+    width: calc(40% - 10px);
+    float: left;
+    padding: 5px;
+}
+.main__map-contaner{
+    width: 60%;
+    padding: 0;
+}
+.main__phone-number{
+    font-weight: bold;
+    color: $light-black;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+    &:focus{
+        outline: none;
+        text-decoration: underline;
+    }
+    &:after{
+        content: " \260e";
+    }
+}
+.main__google-map{
+    width: calc(90% - 2px);
+    border: 1px solid rgba(50,50,50,0.4);
+    height: 300px;
+    margin: 0 auto;
+}
+.footer{
+    padding-top: 30px;
+    color: $light-black;
+    border-top: 1px solid rgba(0,0,0,0.4);
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
+    background-color: rgba(255,255,255,0.8);
+    min-height: 300px;
+}
+.footer__social-media-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+        cursor: pointer;
+        display: inline-block;
+        margin: 10px;
+        width: 50px;
+        img{
+            transition: transform 0.6s;
+        }
+        &:hover{
+            img{
+                transform: rotateY(180deg);
+            }
+        }
+        a{
+            &:focus{
+                outline: none;
+                border-bottom: 1px solid rgba(0,0,0,0.2);
+                img{
+                    transform: rotateY(180deg);
+                }
+            }
+        }
     }
 }

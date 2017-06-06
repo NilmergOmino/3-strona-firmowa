@@ -1,19 +1,23 @@
 $lato-font: 'Lato', sans-serif;
 $light-black: rgba(0,0,0,0.8);
-@mixin container($color: $light-black, $float: left){
+@mixin container($margin-right, $margin-left, $color: $light-black, $float: left){
     color: $color;
     font-size: 20px;
-    height: 350px;
-    width: 40%;
-    padding: 50px 5% 0 5%;
+    height: 400px;
+    width: 48%;
+    padding: 0;
     float: $float;
-    text-align: center;
+    margin: 0;
+    margin-right: $margin-right;
+    margin-left: $margin-left;
 }
 @mixin floating-figure($float: left){
-    width: 40%;
+    margin: 0;
+    width: 48%;
     float: $float;
+    height: 100%;
     img{
-        max-height: 400px;
+        max-height: 100%;
         width: 100%;
     }
 }
@@ -59,7 +63,6 @@ body{
     transition: box-shadow 0.5s;
 }
 .nav_sticky{
-    transform: translateY(0);
     top: 0;
     position: fixed;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
@@ -97,6 +100,7 @@ body{
     width: 80%;
     margin: 0 auto;
     padding: 50px 0;
+    text-align: center;
 }
 .main__article{
     padding: 50px 10px 30px 10px;
@@ -104,7 +108,6 @@ body{
     margin-top: 10px;
     .main__heading{
         margin-bottom: 40px;
-        text-align: center;
         font-size: 32px;
         color: $light-black;
     }
@@ -112,40 +115,25 @@ body{
 .clear{
     clear: both;
 }
-.main__offer-section{
-    min-height: 400px;
-    margin-bottom: 50px;
+.main__offer-section, .main__about-container{
+    height: 400px;
+    margin: 50px auto;
+    width: 90%;
 }
-.main__about-container{
-    @include container();
+.main__about-text, .main__offer-building{
+    @include container($margin-right: 4%, $margin-left: 0);
 }
-.main__about-image{
+.main__about-image, .main__offer-building-image{
     @include floating-figure();
 }
-.main__offer-architect{
-    @include container($float: right);
+.main__offer-architect, .main__offer-arrangement{
+    @include container($margin-right: 0, $margin-left: 4%, $float: right);
 }
-.main__offer-architect-image{
-    @include floating-figure($float: right);
-}
-.main__offer-building{
-    @include container();
-    padding-top: 20px;
-}
-.main__offer-building-image{
-    @include floating-figure();
-}
-.main__offer-arrangement{
-    @include container($float: right);
-    padding-top: 20px;
-}
-.main__offer-arrangement-image{
+.main__offer-architect-image, .main__offer-arrangement-image{
     @include floating-figure($float: right);
 }
 .main__offer-section-realizations{
     color: $light-black;
-    text-align: center;
-    min-height: 150px;
     margin-top: 100px;
     font-size: 20px;
     vertical-align: top;
@@ -174,7 +162,6 @@ body{
     animation-duration: 1s;
 }
 .main__gallery-container{
-    text-align: center;
     width: 70%;
     margin: 50px auto;
 }
@@ -187,7 +174,6 @@ body{
     transition: 0.2s;
     &:hover{
         opacity: 0.9;
-        //outline: 1px solid $light-black;
     }
 }
 @keyframes show-gallery-view {
@@ -256,7 +242,8 @@ body{
     }
 }
 .gallery-view-figure{
-    width: 70%;
+    margin: 0;
+    width: 80%;
     height: calc(100% - 150px);
     display: inline-block;
     margin-top: 10px;
@@ -271,7 +258,6 @@ body{
     text-align: center;
 }
 .main__article-our-people{
-    text-align: center;
     padding-left: 10%;
     padding-right: 10%;
 }
@@ -282,7 +268,6 @@ body{
     width: 150px;
     min-height: 200px;
     display: inline-block;
-    text-align: center;
     vertical-align: top;
 }
 .main__our-people-image{
@@ -301,7 +286,6 @@ body{
     padding: 0 10%;
 }
 .main__contact-container-first, .main__contact-container-second{
-    text-align: center;
     float: left;
     width: 40%;
     min-height: 200px;
@@ -357,11 +341,9 @@ body{
     margin-top: 150px;
     color: $light-black;
     font-size: 18px;
-    text-align: center;
 }
 .main__contact-section-heading{
     font-size: 20px;
-    text-align: center;
 }
 .main__office-container, .main__map-contaner{
     width: calc(40% - 10px);
@@ -431,3 +413,4 @@ body{
         }
     }
 }
+@import 'responsive';

@@ -8,7 +8,6 @@
     <meta name="author" content="Nilmerg Omino">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link rel="stylesheet" href="css/fontello/css/fontello.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Mdom</title>
 </head>
@@ -30,14 +29,16 @@
     <main class="main" id="main">
         <article class="main__article" id="o-firmie">
             <h2 class="main__heading">O naszej firmie</h2>
-            <div class="main__about-container fade-in">
-                <p>Jesteśmy firmą z wieloletnim doświadczeniem zajmującą się budową nowoczesnych domów.</p>
-                <p>Tworzymy projekty domów dopasowane specjalnie pod wymagania naszego klienta.</p>
-                <p>Cenimy sobie zaufanie i kontakt z klientem na każdym etapie projektowania i budowy domu.</p>
+            <div class="main__about-container">
+                <div class="main__about-text fade-in">
+                    <p>Jesteśmy firmą z wieloletnim doświadczeniem zajmującą się budową nowoczesnych domów.</p>
+                    <p>Tworzymy projekty domów dopasowane specjalnie pod wymagania naszego klienta.</p>
+                    <p>Cenimy sobie zaufanie i kontakt z klientem na każdym etapie projektowania i budowy domu.</p>
+                </div>
+                <figure class="main__about-image fade-in">
+                    <img src="img/house_about.png" alt="projekt domu">
+                </figure>
             </div>
-            <figure class="main__about-image fade-in">
-                <img src="img/house_about.png" alt="projekt domu">
-            </figure>
         </article>
         <article class="main__article" id="nasza-oferta">
             <h2 class="main__heading">Nasza oferta</h2>
@@ -69,7 +70,7 @@
                 </figure>
             </section>
 
-            <section class="main__offer-section main__offer-section-realizations">
+            <section class="main__offer-section-realizations">
                 <h3>Nasze realizacje</h3>
                 <div class="main__our-realization fade-in" id="counting-elements"><span class="main__our-realization-count">140</span>utworzonych projektów</div>
                 <div class="main__our-realization fade-in"><span class="main__our-realization-count">39</span>zbudowanych domów</div>
@@ -197,7 +198,7 @@
         <section>
             <h2>O stronie</h2>
             <p>Autor: Nilmerg</p>
-            <p>Mdom to firma całkowicie fikcyjna</p>
+            <p>Mdom to firma całkowicie fikcyjna.</p>
             <p>Projekt ten realizowany jest w celu nauki.</p>
         </section>
     </footer>

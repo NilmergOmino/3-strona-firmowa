@@ -164,7 +164,6 @@ body {
   transition: box-shadow 0.5s; }
 
 .nav_sticky {
-  transform: translateY(0);
   top: 0;
   position: fixed;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); }
@@ -196,7 +195,8 @@ body {
   border-top: none;
   width: 80%;
   margin: 0 auto;
-  padding: 50px 0; }
+  padding: 50px 0;
+  text-align: center; }
 
 .main__article {
   padding: 50px 10px 30px 10px;
@@ -204,87 +204,59 @@ body {
   margin-top: 10px; }
   .main__article .main__heading {
     margin-bottom: 40px;
-    text-align: center;
     font-size: 32px;
     color: rgba(0, 0, 0, 0.8); }
 
 .clear {
   clear: both; }
 
-.main__offer-section {
-  min-height: 400px;
-  margin-bottom: 50px; }
+.main__offer-section, .main__about-container {
+  height: 400px;
+  margin: 50px auto;
+  width: 90%; }
 
-.main__about-container {
+.main__about-text, .main__offer-building {
   color: rgba(0, 0, 0, 0.8);
   font-size: 20px;
-  height: 350px;
-  width: 40%;
-  padding: 50px 5% 0 5%;
+  height: 400px;
+  width: 48%;
+  padding: 0;
   float: left;
-  text-align: center; }
+  margin: 0;
+  margin-right: 4%;
+  margin-left: 0; }
 
-.main__about-image {
-  width: 40%;
-  float: left; }
-  .main__about-image img {
-    max-height: 400px;
-    width: 100%; }
-
-.main__offer-architect {
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 20px;
-  height: 350px;
-  width: 40%;
-  padding: 50px 5% 0 5%;
-  float: right;
-  text-align: center; }
-
-.main__offer-architect-image {
-  width: 40%;
-  float: right; }
-  .main__offer-architect-image img {
-    max-height: 400px;
-    width: 100%; }
-
-.main__offer-building {
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 20px;
-  height: 350px;
-  width: 40%;
-  padding: 50px 5% 0 5%;
+.main__about-image, .main__offer-building-image {
+  margin: 0;
+  width: 48%;
   float: left;
-  text-align: center;
-  padding-top: 20px; }
-
-.main__offer-building-image {
-  width: 40%;
-  float: left; }
-  .main__offer-building-image img {
-    max-height: 400px;
+  height: 100%; }
+  .main__about-image img, .main__offer-building-image img {
+    max-height: 100%;
     width: 100%; }
 
-.main__offer-arrangement {
+.main__offer-architect, .main__offer-arrangement {
   color: rgba(0, 0, 0, 0.8);
   font-size: 20px;
-  height: 350px;
-  width: 40%;
-  padding: 50px 5% 0 5%;
+  height: 400px;
+  width: 48%;
+  padding: 0;
   float: right;
-  text-align: center;
-  padding-top: 20px; }
+  margin: 0;
+  margin-right: 0;
+  margin-left: 4%; }
 
-.main__offer-arrangement-image {
-  width: 40%;
-  float: right; }
-  .main__offer-arrangement-image img {
-    max-height: 400px;
+.main__offer-architect-image, .main__offer-arrangement-image {
+  margin: 0;
+  width: 48%;
+  float: right;
+  height: 100%; }
+  .main__offer-architect-image img, .main__offer-arrangement-image img {
+    max-height: 100%;
     width: 100%; }
 
 .main__offer-section-realizations {
   color: rgba(0, 0, 0, 0.8);
-  text-align: center;
-  min-height: 150px;
   margin-top: 100px;
   font-size: 20px;
   vertical-align: top; }
@@ -313,7 +285,6 @@ body {
   animation-duration: 1s; }
 
 .main__gallery-container {
-  text-align: center;
   width: 70%;
   margin: 50px auto; }
 
@@ -389,7 +360,8 @@ body {
     background-color: rgba(0, 0, 0, 0.2); }
 
 .gallery-view-figure {
-  width: 70%;
+  margin: 0;
+  width: 80%;
   height: calc(100% - 150px);
   display: inline-block;
   margin-top: 10px;
@@ -404,7 +376,6 @@ body {
   text-align: center; }
 
 .main__article-our-people {
-  text-align: center;
   padding-left: 10%;
   padding-right: 10%; }
 
@@ -415,7 +386,6 @@ body {
   width: 150px;
   min-height: 200px;
   display: inline-block;
-  text-align: center;
   vertical-align: top; }
 
 .main__our-people-image {
@@ -433,7 +403,6 @@ body {
   padding: 0 10%; }
 
 .main__contact-container-first, .main__contact-container-second {
-  text-align: center;
   float: left;
   width: 40%;
   min-height: 200px;
@@ -484,12 +453,10 @@ body {
 .main__contact-section-office {
   margin-top: 150px;
   color: rgba(0, 0, 0, 0.8);
-  font-size: 18px;
-  text-align: center; }
+  font-size: 18px; }
 
 .main__contact-section-heading {
-  font-size: 20px;
-  text-align: center; }
+  font-size: 20px; }
 
 .main__office-container, .main__map-contaner {
   width: calc(40% - 10px);
@@ -546,5 +513,80 @@ body {
       border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
       .footer__social-media-list li a:focus img {
         transform: rotateY(180deg); }
+
+@media (max-width: 850px) {
+  .main__article-our-people {
+    padding-left: 2%;
+    padding-right: 2%; }
+
+  .main__offer-section, .main__about-container {
+    height: auto;
+    margin: 20px auto;
+    width: 90%; }
+
+  .main__about-text, .main__offer-building, .main__offer-architect, .main__offer-arrangement {
+    float: none;
+    width: 90%;
+    margin: 20px auto;
+    height: auto; }
+
+  .main__about-image, .main__offer-building-image, .main__offer-architect-image, .main__offer-arrangement-image {
+    float: none;
+    width: 70%;
+    margin: 10px auto; }
+
+  .main__contact-container-first, .main__contact-container-second {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0; }
+
+  .main__office-container, .main__map-contaner {
+    width: 90%;
+    float: none;
+    padding: 0;
+    margin: 0 auto; } }
+@media (max-width: 710px) {
+  .nav {
+    left: calc(2.5% - 1px);
+    width: 95%; }
+
+  .main {
+    width: 95%; } }
+@media (max-width: 610px) {
+  .main__our-people-figure {
+    padding: 20px;
+    width: 100px; }
+
+  .main__article-our-people {
+    padding-left: 0;
+    padding-right: 0; } }
+@media (max-width: 560px) {
+  .nav__list li {
+    margin-right: 5%; }
+
+  .main__gallery-container {
+    width: 100%;
+    margin: 50px auto; }
+
+  .main__gallery-image {
+    margin: 4px 0; } }
+@media (max-width: 450px) {
+  .gallery-view-container .gallery-view-title {
+    text-align: left;
+    padding-left: 20px; }
+
+  .gallery-view-exit-button {
+    width: 100px; } }
+@media (max-width: 410px) {
+  .nav {
+    height: 70px;
+    top: calc(85% - 70px); }
+
+  .nav_sticky {
+    top: 0; } }
+@media (max-width: 360px) {
+  .main__gallery-image {
+    height: 120px; } }
 
 /*# sourceMappingURL=style.css.map */

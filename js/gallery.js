@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
         var createImage = function(image){
             var imageSource = image.src,
-                imageMaxSource = imageSource.replace('min','max'),
+                imageMaxSource = imageSource.replace('_min.','_max.'),
                 altText = image.alt;
                 bigImage = document.getElementById('gallery-view-image'),
                 figcaption = document.getElementById('gallery-view-figcaption');

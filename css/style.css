@@ -147,8 +147,13 @@ body {
     padding-top: 40px; }
   .header .header__logo {
     position: absolute;
-    top: 10%;
-    left: 10%; }
+    top: 5%;
+    left: 10%;
+    transition: 0.3s; }
+  .header .header__link:hover .header__logo {
+    transform: skewY(15deg); }
+  .header .header__link:focus .header__logo {
+    transform: skewY(15deg); }
 
 .nav {
   text-align: center;
@@ -552,7 +557,11 @@ body {
     width: 95%; }
 
   .main {
-    width: 95%; } }
+    width: 95%; }
+
+  .header .header__logo {
+    height: 70px;
+    left: 5%; } }
 @media (max-width: 610px) {
   .main__our-people-figure {
     padding: 20px;
@@ -562,6 +571,10 @@ body {
     padding-left: 0;
     padding-right: 0; } }
 @media (max-width: 560px) {
+  .header .header__logo {
+    height: 50px;
+    left: 2%; }
+
   .nav__list li {
     margin-right: 5%; }
 
@@ -587,6 +600,11 @@ body {
     top: 0; } }
 @media (max-width: 360px) {
   .main__gallery-image {
-    height: 120px; } }
+    height: 120px; }
+
+  .header .header__logo {
+    height: 30px;
+    top: 1%;
+    left: 1%; } }
 
 /*# sourceMappingURL=style.css.map */

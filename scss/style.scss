@@ -45,8 +45,17 @@ body{
     }
     .header__logo{
         position: absolute;
-        top: 10%;
+        top: 5%;
         left: 10%;
+        transition: 0.3s;
+    }
+    .header__link{
+        &:hover .header__logo{
+            transform: skewY(15deg);
+        }
+        &:focus .header__logo{
+            transform: skewY(15deg);
+        }
     }
 }
 .nav{
